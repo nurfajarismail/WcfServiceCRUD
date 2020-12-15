@@ -75,7 +75,7 @@ namespace WcfService
             con.Open();
             SqlCommand cmd = new SqlCommand("Update UserTab set Name = @Name, Email = @Email where UserID= @UserID", con);
             cmd.Parameters.AddWithValue("@UserID", u.UID);
-            cmd.Parameters.AddWithValue("@name", u.Name);
+            cmd.Parameters.AddWithValue("@Name", u.Name);
             cmd.Parameters.AddWithValue("@Email", u.Email);
             int res = cmd.ExecuteNonQuery();
             if (res == 1)
